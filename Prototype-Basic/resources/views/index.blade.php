@@ -7,8 +7,6 @@
     <title>Brief</title>
 </head>
 <body>
-    
-    <a href="/create"><button>Ajouter</button></a>
     <table>
         <thead>
             <tr>
@@ -17,19 +15,18 @@
             </tr>
         </thead>
         <tbody id="tbody"> 
-            {{-- @foreach ($promotion as $value) --}}
-                
+            @foreach ($briefs as $value)
             <tr>
-                <th></th>
-                <td></td>
+                <th>{{$value->id}}</th>
+                <td>{{$value->brief}}</td>
                 <td>
                     {{-- <a href="ddit/{{$value->id}}"><button>Modifier</button></a>
                     <a href="Delete/{{$value->id}}"><button>Supprimer</button></a> --}}
                 </td>
             </tr>
-            {{-- @endforeach
-     --}}
+            @endforeach
         </tbody>
+        <a href="/add"><button>Ajouter</button></a>
     </table>
 
 </body>
