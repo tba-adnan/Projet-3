@@ -41,7 +41,7 @@ class PromotionController
     public function store(Request $request)
     {
         $promotion = New Promotion();
-        $promotion->Name_promotion =$request->Name;
+        $promotion->promotion_name =$request->Name;
         $promotion->save();
         if ($promotion->save()) {
             return redirect("promotion");
@@ -67,11 +67,11 @@ class PromotionController
      */
     public function edit(Promotion $promotion)
     {
-        $brief = assigner::select("Nom_du_brief")
+        $brief = assigner::select("brief_name")
         ->where("briefs_student.promotion_id",$promotion->id)
         ->join("briefs",'briefs_student.briefs_id','=','briefs.id')
 
-        ->groupByRaw('Nom_du_brief')
+        ->groupByRaw('brief_name')
         ->get();
         $id = $promotion->id;
         
@@ -93,7 +93,7 @@ class PromotionController
 
       $promotion=  Promotion::find($promotion->id)
         ->update([
-            'Name_promotion'=>$request->Name
+            'promotion_name'=>$request->Name
         ]);
         return back();
 

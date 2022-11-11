@@ -6,7 +6,7 @@
 <form method="POST" action="{{route("promotion.update",$promotion->id)}}">
     @method("PUT")
     @csrf
-<input type="text" value="{{$promotion->Name_promotion}}" name="Name">
+<input type="text" value="{{$promotion->promotion_name}}" name="Name">
 <button>Update</button>
 </form>
 

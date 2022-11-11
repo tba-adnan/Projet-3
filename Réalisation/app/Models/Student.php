@@ -12,7 +12,7 @@ class Student extends Model
     protected $table = "students";
 
     protected $fillable=[
-     'Name_promotion'
+     'promotion_name'
     ];
 
     public $timestamps=false;

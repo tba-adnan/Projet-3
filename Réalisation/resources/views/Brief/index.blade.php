@@ -20,7 +20,7 @@
         @foreach ($brief as $item )
         <tr>
             <td>{{$item->id}} </td>
-            <td>{{$item->Nom_du_brief}} </td>
+            <td>{{$item->brief_name}} </td>
             <td>{{$item->Date_heure_de_livraison}}</td>
             <td>{{$item->Date_heure_de_récupération}}</td>
             <td class="d-flex justify-content-evenly" >

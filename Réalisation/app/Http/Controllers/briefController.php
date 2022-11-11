@@ -39,7 +39,7 @@ class briefController
     {
 
         $brief =new Briefs();
-        $brief->Nom_du_brief = $request->Nom ;
+        $brief->brief_name = $request->Nom ;
         $brief->Date_heure_de_livraison =$request->Date_livraison ;
         $brief->Date_heure_de_récupération=$request->Date_recuperation ;
         $brief->save();
@@ -83,7 +83,7 @@ class briefController
     {
 
         $brief =Briefs::find($id);
-        $brief->Nom_du_brief = $request->Nom ;
+        $brief->brief_name = $request->Nom ;
         $brief->Date_heure_de_livraison =$request->Date_livraison ;
         $brief->Date_heure_de_récupération=$request->Date_recuperation ;
         $brief->save();

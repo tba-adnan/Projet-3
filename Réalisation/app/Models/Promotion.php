@@ -10,7 +10,7 @@ class Promotion extends Model
 {
     use HasFactory;
    protected $fillable=[
-    'Name_promotion',
+    'promotion_name',
     "created_at",
     "updated_at"
 

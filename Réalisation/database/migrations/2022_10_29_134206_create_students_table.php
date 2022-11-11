@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->increments('id');
-            $table->string("First_name")->nullable();
-            $table->string("Last_name")->nullable();
-            $table->string("Email")->nullable();
+            $table->string("fname")->nullable();
+            $table->string("lname")->nullable();
+            $table->string("email")->nullable();
             $table->unsignedInteger("promotion_id")->nullable();
             $table->foreign("promotion_id")
             ->references("id")

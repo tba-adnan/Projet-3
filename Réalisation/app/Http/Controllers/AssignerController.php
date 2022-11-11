@@ -10,10 +10,7 @@ use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Session as FacadesSession;
-use Illuminate\Validation\Rule as ValidationRule;
-use Illuminate\Validation\Validator as ValidationValidator;
-use Symfony\Component\HttpFoundation\Session\Session as SessionSession;
+
 
 class AssignerController
 {

@@ -16,7 +16,7 @@
     @foreach  ($promotion as $item )
         <tr>
             <td>{{$item->id}}</td>
-            <td>{{$item->Name_promotion}}</td>
+            <td>{{$item->promotion_name}}</td>
             <td class="d-flex"><a class="btn btn-success" href="{{route("promotion.edit",$item->id)}}">Edit</a>
 
             <form action="{{route("promotion.destroy",$item->id)}}" method='post'>

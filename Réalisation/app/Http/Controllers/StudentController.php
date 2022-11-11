@@ -38,9 +38,9 @@ class StudentController
     {
         $promotion_id= $request->promotion_id;
         $student = new Student();
-        $student->First_name = $request->First_name;
-        $student->Last_name = $request->Last_name;
-        $student->Email = $request->Email;
+        $student->fname = $request->fname;
+        $student->lname = $request->lname;
+        $student->email = $request->email;
         $student->promotion_id = $promotion_id;
         $student->save();
         return redirect('promotion/'.$promotion_id.'/edit');
@@ -82,9 +82,9 @@ class StudentController
     public function update(Request $request,$id)
     {
         $student =Student::find($id);
-        $student->First_name = $request->First_name;
-        $student->Last_name = $request->Last_name;
-        $student->Email = $request->Email;
+        $student->fname = $request->fname;
+        $student->lname = $request->lname;
+        $student->email = $request->email;
 
         $student->save();
         return redirect('promotion/'.$request->promotion_id.'/edit');
