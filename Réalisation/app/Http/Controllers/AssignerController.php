@@ -91,16 +91,9 @@ class AssignerController
         ->rightJoin("students",'briefs_student.student_id',"students.id")
         // ->where("students.promotion_id",$promotionId)
         ->get() ;
-        // dd($AllStudent);
-
-
-
-
 
         $brief_student = Briefs::find($id);
         $brief_student = $brief_student->Student->find($id);
-        // dd($brief_student);
-
         return view('Brief.assigner',compact("AllStudent",'brief_student',"promotionId","StudentIndex","id","assigner","students","brief"));
     }
 

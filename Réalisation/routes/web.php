@@ -18,27 +18,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
-Route::get('/test',[PromotionController::class,'edit']);
+// Redirect.
+Route::redirect('/', 'brief', 301);
 
 Route::resource('brief',briefController::class);
-
-
-// Route::resource('student',StudentController::class);
-
 Route::resource('assigner',AssignerController::class);
 Route::get('/assignerAll',[AssignerController::class,'assignerAll'])->name('assigner.All');
-
-
 Route::resource('promotion',PromotionController::class);
 Route::resource('task',TasksController::class);
-
-
-// student controller
 Route::get('/student/index',[StudentController::class,'index'])->name('student.index');
 Route::get('/student/create/{id}',[StudentController::class,'create'])->name('student.create');
 Route::post('/student/store',[StudentController::class,'store'])->name('student.store');
