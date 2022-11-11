@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\briefController;
-use App\Http\Controllers\TasksController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BriefController;
+use App\Http\Controllers\AssignController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::redirect('/', 'brief', 301);
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::resource('brief',briefController::class);
-Route::resource('task',TasksController::class);
+Route::resource('/brief', BriefController::class);
+Route::resource('/assign', AssignController::class);

@@ -11,11 +11,11 @@ class Briefs extends Model
     use HasFactory;
 
     public $timestamps= false;
-    protected $fillable = [
-        'Nom du brief',
-        'Date/heure de livraison',
-        'Date/heure de récupération'
-    ];
+    // protected $fillable = [
+    //     'Nom du brief',
+    //     'Date/heure de livraison',
+    //     'Date/heure de récupération'
+    // ];
 
     public function Tasks(){
 
