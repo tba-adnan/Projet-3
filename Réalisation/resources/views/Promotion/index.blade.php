@@ -25,10 +25,10 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="../../index3.html" class="nav-link">Home</a>
+        <a href="/" class="nav-link">Home</a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+      <!-- <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Contact</a> -->
       </li>
     </ul>
 
@@ -204,14 +204,10 @@
           </li> -->
           <li class="nav-item">
             <a href="promotion" class="nav-link">
-              <i class="nav-icon far fa-circle text-warning"></i>
-              <p>Promotion</p>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon far fa-circle text-info"></i>
-              <p>Informational</p>
             </a>
           </li>
         </ul>
@@ -228,30 +224,18 @@
     <section class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
-          <div class="card-body table-responsive p-0">
-
-
-
-
-
-            @include("layouts.head")
-            @include("welcome")
-            
-            <br><br>
-            <a href="{{route("promotion.create")}}"><button>add promotion</button></a>
-            <br><br>
-            <table class="table-bordered" width="500">
+          <div class="card-body table-responsive p-0">            
+            <table class="table table-hover text-nowrap" width="500">
                 <thead>
                     <tr>
-                        <th>Id</th>
-                        <th>Name promotion</th>
-                        <th>Action</th>
+                        <th>Nom du Promotion : </th>
+                        <th>Action : </th>
                     </tr>
                 </thead>
                 <tbody>
                 @foreach  ($promotion as $item )
                     <tr>
-                        <td>{{$item->id}}</td>
+                        <!-- <td>{{$item->id}}</td> -->
                         <td>{{$item->promotion_name}}</td>
                         <td class="d-flex"><a class="btn btn-success" href="{{route("promotion.edit",$item->id)}}">Edit</a>
             
@@ -264,15 +248,9 @@
                     </tr>
                 @endforeach
                 </tbody>
-            </table>
-            
-
-
-
-
-
-
-          <div class="col-sm-6">
+            </table>            
+            <a href="{{route('promotion.create')}}"><button class="btn btn-success" >add promotion</button></a>
+<div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <!-- <li class="breadcrumb-item"><a href="#">Home</a></li>
               <li class="breadcrumb-item"><a href="#">Layout</a></li>
