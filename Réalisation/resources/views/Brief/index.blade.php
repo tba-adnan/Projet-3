@@ -25,10 +25,10 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="../../index3.html" class="nav-link">Home</a>
+        <a href="/" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+        <!-- <a href="#" class="nav-link">Contact</a> -->
       </li>
     </ul>
 
@@ -158,7 +158,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar main-sidebar-custom sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="../../index3.html" class="brand-link">
+    <!-- <a href="../../index3.html" class="brand-link"> -->
       <!-- <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">AdminLTE 3</span> -->
     </a>
@@ -204,14 +204,14 @@
           </li> -->
           <li class="nav-item">
             <a href="promotion" class="nav-link">
-              <i class="nav-icon far fa-circle text-warning"></i>
-              <p>Promotion</p>
+              <!-- <i class="nav-icon far fa-circle text-warning"></i>
+              <p>Promotion</p> -->
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon far fa-circle text-info"></i>
-              <p>Informational</p>
+              <!-- <i class="nav-icon far fa-circle text-info"></i>
+              <p>Informational</p> -->
             </a>
           </li>
         </ul>
@@ -254,16 +254,16 @@
                         <td>{{$item->brief_name}} </td>
                         <td>{{$item->Date_heure_de_livraison}}</td>
                         <td>{{$item->Date_heure_de_récupération}}</td>
+                      
                         <td class="d-flex justify-content-evenly" >
-                            <a href="{{route('brief.edit',$item->id)}}"><button class="btn btn-block btn-outline-success" >Edit</button></a>
-            
-<br>
+                            <a href="{{route('brief.edit',$item->id)}}"><button class="btn btn-outline-success" >Edit</button></a>        
+                     
                             <form action="{{route('brief.destroy',$item->id)}}" method="POST">@method("DELETE")
                             @csrf
-                            <button class="btn btn-block btn-outline-danger">Delete</button>
+                            <button class="btn btn-outline-danger">Delete</button>
                             </form>
-
-                            <button class="btn btn-block btn-outline-dark"> <a href="{{route('assigner.show',$item->id)}}">assigner</a></button>
+                       
+                            <button class="btn btn-outline-dark btn"> <a href="{{route('assigner.show',$item->id)}}">assigner</a></button>
                         </td>
                     </tr>
                 </div>
