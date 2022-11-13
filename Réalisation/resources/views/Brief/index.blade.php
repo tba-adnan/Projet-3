@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>System du gestion</title>
+  <title>Gestion des Briefs : </title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -242,7 +242,7 @@
                         <!-- <th>id : </th> -->
                         <th>Nom du brief</th>
                         <th>Début du Brief :</th>
-                        <th>Fin dutâche :</th>
+                        <th>Fin du Brief :</th>
                         <th>action :</th>
             
                     </tr>
@@ -271,10 +271,9 @@
                 </tbody>
             </table>
           </div>
-          <a href="{{route("brief.create")}}"><button class="btn btn-block btn-primary">add brief</button></a>
 
 
-
+          <a href="{{route("brief.create")}}"><button class="btn btn-primary">add brief</button></a>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <!-- <li class="breadcrumb-item"><a href="#">Home</a></li>
