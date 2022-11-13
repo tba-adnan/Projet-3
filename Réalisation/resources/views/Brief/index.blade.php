@@ -239,7 +239,7 @@
                 <thead>
                     <tr>
             
-                        <th>id : </th>
+                        <!-- <th>id : </th> -->
                         <th>Nom du brief</th>
                         <th>Début du Brief :</th>
                         <th>Fin dutâche :</th>
@@ -250,7 +250,7 @@
                 <tbody>
                     @foreach ($brief as $item )
                     <tr>
-                        <td>{{$item->id}} </td>
+                        <!-- <td>{{$item->id}} </td> -->
                         <td>{{$item->brief_name}} </td>
                         <td>{{$item->Date_heure_de_livraison}}</td>
                         <td>{{$item->Date_heure_de_récupération}}</td>
