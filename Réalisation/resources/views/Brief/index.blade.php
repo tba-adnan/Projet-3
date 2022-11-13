@@ -240,10 +240,10 @@
                     <tr>
             
                         <!-- <th>id : </th> -->
-                        <th>Nom du brief</th>
+                        <th>Nom du brief : </th>
                         <th>Début du Brief :</th>
                         <th>Fin du Brief :</th>
-                        <th>action :</th>
+                        <th>Action :</th>
             
                     </tr>
                 </thead>
@@ -256,14 +256,15 @@
                         <td>{{$item->Date_heure_de_récupération}}</td>
                       
                         <td class="d-flex justify-content-evenly" >
-                            <a href="{{route('brief.edit',$item->id)}}"><button class="btn btn-outline-success" >Edit</button></a>        
-                     
+                            <a href="{{route('brief.edit',$item->id)}}"><button class="btn btn-outline-success" >Modifier</button></a>        
+                            <button class="btn btn-outline-dark btn"> <a href="{{route('assigner.show',$item->id)}}">Assigner</a></button>
+                      
                             <form action="{{route('brief.destroy',$item->id)}}" method="POST">@method("DELETE")
+                            <button class="btn btn-outline-danger">Supprimer</button>
                             @csrf
-                            <button class="btn btn-outline-danger">Delete</button>
                             </form>
                        
-                            <button class="btn btn-outline-dark btn"> <a href="{{route('assigner.show',$item->id)}}">assigner</a></button>
+                           
                         </td>
                     </tr>
                 </div>
@@ -273,7 +274,7 @@
           </div>
 
 
-          <a href="{{route("brief.create")}}"><button class="btn btn-primary">add brief</button></a>
+          <a href="{{route("brief.create")}}"><button class="btn btn-primary">Ajouté Brief</button></a>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <!-- <li class="breadcrumb-item"><a href="#">Home</a></li>
